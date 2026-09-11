@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#0b1020">
+    <meta name="description" content="Privacy Policy for the Pocket Rocket Stream browser extension.">
+    <title>Privacy Policy — Pocket Rocket Stream</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #080b14;
+        --surface: rgba(20, 25, 42, 0.86);
+        --surface-strong: #151b2d;
+        --border: rgba(148, 163, 184, 0.18);
+        --text: #f7f8ff;
+        --muted: #aab2c8;
+        --accent: #7768ff;
+        --accent-2: #18c8bb;
+        --warm: #ff7b45;
+        --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-synthesis: none;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        min-width: 280px;
+        margin: 0;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 10% 0%, rgba(119, 104, 255, 0.2), transparent 32rem),
+          radial-gradient(circle at 94% 10%, rgba(24, 200, 187, 0.12), transparent 28rem),
+          var(--bg);
+        font-size: 16px;
+        line-height: 1.68;
+      }
+
+      a { color: #a99fff; }
+      a:hover { color: #c4bdff; }
+
+      .shell {
+        width: min(960px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 28px 0 72px;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        margin-bottom: 28px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--text);
+        font-weight: 750;
+        letter-spacing: -0.02em;
+      }
+
+      .mark {
+        display: grid;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 13px;
+        background: linear-gradient(145deg, #765cff, #4b41d7);
+        box-shadow: 0 10px 28px rgba(91, 72, 225, 0.4);
+      }
+
+      .mark svg { width: 27px; height: 27px; }
+
+      .languages {
+        display: flex;
+        padding: 4px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: rgba(9, 13, 25, 0.65);
+      }
+
+      .languages button {
+        min-width: 72px;
+        padding: 7px 13px;
+        border: 0;
+        border-radius: 8px;
+        color: var(--muted);
+        background: transparent;
+        font: inherit;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .languages button[aria-pressed="true"] {
+        color: white;
+        background: var(--accent);
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 6vw, 58px);
+        border: 1px solid var(--border);
+        border-radius: 28px;
+        background: linear-gradient(145deg, rgba(25, 31, 53, 0.96), rgba(14, 18, 32, 0.96));
+        box-shadow: var(--shadow);
+      }
+
+      .hero::after {
+        position: absolute;
+        right: -90px;
+        top: -110px;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(119, 104, 255, 0.28), transparent 68%);
+        content: "";
+        pointer-events: none;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 13px;
+        color: #9ff4e9;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--accent-2);
+        box-shadow: 0 0 16px var(--accent-2);
+        content: "";
+      }
+
+      h1, h2 { line-height: 1.18; }
+
+      h1 {
+        position: relative;
+        z-index: 1;
+        max-width: 680px;
+        margin: 0;
+        font-size: clamp(34px, 7vw, 64px);
+        letter-spacing: -0.055em;
+      }
+
+      .lead {
+        position: relative;
+        z-index: 1;
+        max-width: 720px;
+        margin: 20px 0 0;
+        color: #cbd1e2;
+        font-size: clamp(17px, 2.2vw, 20px);
+      }
+
+      .updated {
+        margin: 24px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .promise-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin: 18px 0 38px;
+      }
+
+      .promise {
+        padding: 18px;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: rgba(17, 22, 38, 0.72);
+      }
+
+      .promise strong {
+        display: block;
+        margin-bottom: 3px;
+        font-size: 14px;
+      }
+
+      .promise span { color: var(--muted); font-size: 13px; }
+
+      .content {
+        padding: clamp(4px, 2vw, 16px) clamp(2px, 5vw, 42px);
+      }
+
+      section.policy-section {
+        padding: 30px 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      section.policy-section:last-child { border-bottom: 0; }
+
+      h2 {
+        margin: 0 0 13px;
+        font-size: clamp(21px, 3vw, 27px);
+        letter-spacing: -0.025em;
+      }
+
+      p { margin: 10px 0; color: #c9d0e1; }
+
+      ul { margin: 13px 0 0; padding-left: 22px; color: #c9d0e1; }
+      li + li { margin-top: 8px; }
+      li::marker { color: var(--accent-2); }
+
+      .callout {
+        margin-top: 18px;
+        padding: 17px 19px;
+        border: 1px solid rgba(119, 104, 255, 0.3);
+        border-radius: 14px;
+        background: rgba(119, 104, 255, 0.1);
+        color: #ddd9ff;
+      }
+
+      footer {
+        margin-top: 26px;
+        padding: 24px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        color: var(--muted);
+        background: rgba(17, 22, 38, 0.72);
+        text-align: center;
+      }
+
+      footer strong { color: var(--text); }
+
+      [hidden] { display: none !important; }
+
+      @media (max-width: 680px) {
+        .shell { width: min(100% - 22px, 960px); padding-top: 14px; }
+        .topbar { align-items: flex-start; }
+        .brand span { max-width: 120px; line-height: 1.25; }
+        .languages button { min-width: 56px; padding-inline: 10px; }
+        .hero { border-radius: 21px; }
+        .promise-grid { grid-template-columns: 1fr; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+      }
+
+      @media print {
+        :root { color-scheme: light; }
+        body { color: #172033; background: white; }
+        .shell { width: 100%; padding: 0; }
+        .languages { display: none; }
+        .hero, .promise, footer { color: #172033; background: white; box-shadow: none; }
+        .hero { border-radius: 16px; }
+        h1, h2, .brand, .promise strong, footer strong { color: #111827; }
+        p, ul, .lead, .promise span, .updated, footer { color: #374151; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <div class="topbar">
+        <div class="brand">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M17 4c5.3 2.8 7.6 8.2 5.5 14.1L18.8 25h-5.6l-3.7-6.9C7.4 12.2 9.7 6.8 15 4l1-.5 1 .5Z" fill="#F8FAFF" stroke="#10172A" stroke-width="2"/>
+              <circle cx="16" cy="14" r="3.2" fill="#27C5EA" stroke="#10172A" stroke-width="1.8"/>
+              <path d="m11 18-4 2.5 1-7 2.3-1.3M21 18l4 2.5-1-7-2.3-1.3" fill="#FF5C45" stroke="#10172A" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="m14 25 2 4 2-4" fill="#FF9D3F" stroke="#10172A" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span>Pocket Rocket Stream</span>
+        </div>
+        <div class="languages" aria-label="Language">
+          <button id="language-en" type="button" data-language="en" aria-pressed="true">English</button>
+          <button id="language-ru" type="button" data-language="ru" aria-pressed="false">Русский</button>
+        </div>
+      </div>
+
+      <article id="policy-en" lang="en">
+        <header class="hero">
+          <p class="eyebrow">Privacy first</p>
+          <h1>Privacy Policy</h1>
+          <p class="lead">Pocket Rocket Stream processes only the information needed to find and save media selected by the user. Processing takes place locally on the user's device.</p>
+          <p class="updated">Effective date and last updated: September 11, 2026</p>
+        </header>
+
+        <div class="promise-grid" aria-label="Privacy highlights">
+          <div class="promise"><strong>No developer server</strong><span>User data is not sent to or stored by the developer.</span></div>
+          <div class="promise"><strong>No tracking or advertising</strong><span>No analytics, profiling, advertising, or data sale.</span></div>
+          <div class="promise"><strong>Local processing</strong><span>Detection, temporary storage, and media merging happen on-device.</span></div>
+        </div>
+
+        <div class="content">
+          <section class="policy-section">
+            <h2>1. Scope and purpose</h2>
+            <p>This Privacy Policy describes how the Pocket Rocket Stream browser extension handles user data. The extension's single purpose is to detect media streams available on a page selected by the user and save them, locally merging compatible video and audio tracks when needed.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>2. Information handled</h2>
+            <p>To provide its user-facing functionality, the extension handles the following Chrome Web Store data categories:</p>
+            <ul>
+              <li><strong>Web history:</strong> the URL of the active page and URLs of resources requested by that page.</li>
+              <li><strong>User activity:</strong> technical network-request events required to recognize media streams. The extension does not log keystrokes, mouse movement, or unrelated clicks.</li>
+              <li><strong>Website content:</strong> accessible media elements, links, stream metadata, titles, formats, quality information, and technical response metadata such as MIME type, status, Content-Length, and Content-Range.</li>
+            </ul>
+            <p>The extension does not request or intentionally handle names, postal or email addresses, health information, financial information, passwords, authentication credentials, private communications, or precise location.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>3. How information is used</h2>
+            <p>Information is used solely to scan the user-selected page, identify downloadable media, display available formats, download the resource selected by the user, diagnose failures, and merge compatible video and audio tracks locally. It is not used for any unrelated purpose.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>4. Local storage and retention</h2>
+            <ul>
+              <li>Interface language and developer-mode preferences remain in local extension storage until changed, reset, or the extension is removed.</li>
+              <li>Temporary download jobs and diagnostic events are kept in browser session storage for the current browser session.</li>
+              <li>Large media tracks may be written to private on-device OPFS storage while downloading and merging. The extension removes temporary files after normal completion or cancellation. If a browser or device interruption prevents cleanup, files remain only in the extension's local storage until browser storage is cleared or the extension is removed.</li>
+              <li>The completed file is saved through Chrome Downloads at the user's request and remains under the user's control.</li>
+            </ul>
+            <p>Diagnostic reports are visible only when Developer mode is enabled. Known signed tokens and authorization parameters are redacted from displayed diagnostic URLs. A report leaves the device only if the user explicitly chooses to copy and share it.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>5. Network access and disclosure</h2>
+            <p>By default, the extension receives temporary access to the active tab after the user clicks its toolbar icon. Access to a particular media CDN may be requested when the user starts a download. The user may separately enable or revoke early detection access for HTTP and HTTPS pages.</p>
+            <p>When the user requests a download, the extension connects directly to the source website or its CDN. These connections are necessary to retrieve the selected media and are subject to the source service's own privacy practices. The extension does not add a developer-operated recipient.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>6. Sharing, sale, and advertising</h2>
+            <p>The developer does not receive, sell, rent, share, or transfer user data to third parties. User data is not used for advertising, profiling, creditworthiness, lending, or any purpose unrelated to the extension's single purpose. The developer does not permit humans to read user data.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>7. Security and remote code</h2>
+            <p>Pocket Rocket Stream contains no analytics and executes no remotely hosted JavaScript or WebAssembly. Runtime code is packaged with the extension. Network access is limited to the page and media resources required for the feature initiated by the user.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>8. User controls</h2>
+            <p>Users can avoid processing by not opening the extension, revoke optional website access from the extension or Chrome settings, clear browser extension data, delete downloaded files, or uninstall the extension. Uninstalling removes storage owned by the extension from Chrome.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>9. Limited Use compliance</h2>
+            <p class="callout">The use of information received from Google APIs will adhere to the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>10. Changes to this policy</h2>
+            <p>This policy may be updated when the extension's functionality or legal requirements change. The effective date at the top of this page will be updated. Material changes to data practices will be disclosed before the changed practices take effect.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>11. Contact</h2>
+            <p>For privacy questions, contact <a href="mailto:pocket-rocket-stream@verych.ru">pocket-rocket-stream@verych.ru</a>.</p>
+          </section>
+        </div>
+      </article>
+
+      <article id="policy-ru" lang="ru" hidden>
+        <header class="hero">
+          <p class="eyebrow">Конфиденциальность прежде всего</p>
+          <h1>Политика конфиденциальности</h1>
+          <p class="lead">Pocket Rocket Stream обрабатывает только информацию, необходимую для поиска и сохранения выбранных пользователем медиа. Обработка выполняется локально на устройстве пользователя.</p>
+          <p class="updated">Дата вступления в силу и последнего обновления: 11 сентября 2026 г.</p>
+        </header>
+
+        <div class="promise-grid" aria-label="Основные принципы конфиденциальности">
+          <div class="promise"><strong>Нет сервера разработчика</strong><span>Пользовательские данные не отправляются разработчику и не хранятся у него.</span></div>
+          <div class="promise"><strong>Нет слежения и рекламы</strong><span>Нет аналитики, профилирования, рекламы или продажи данных.</span></div>
+          <div class="promise"><strong>Локальная обработка</strong><span>Поиск, временное хранение и объединение медиа выполняются на устройстве.</span></div>
+        </div>
+
+        <div class="content">
+          <section class="policy-section">
+            <h2>1. Область действия и назначение</h2>
+            <p>Настоящая Политика описывает обработку данных браузерным расширением Pocket Rocket Stream. Единственная цель расширения — находить медиапотоки на выбранной пользователем странице и сохранять их, при необходимости локально объединяя совместимые видео- и аудиодорожки.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>2. Обрабатываемая информация</h2>
+            <p>Для выполнения видимой пользователю функции расширение обрабатывает следующие категории Chrome Web Store:</p>
+            <ul>
+              <li><strong>История веб-поиска и посещений:</strong> URL активной страницы и адреса ресурсов, запрошенных этой страницей.</li>
+              <li><strong>Действия пользователя:</strong> технические события сетевых запросов, необходимые для распознавания медиапотоков. Расширение не регистрирует нажатия клавиш, движения мыши или несвязанные клики.</li>
+              <li><strong>Содержимое сайтов:</strong> доступные медиаэлементы, ссылки, метаданные потоков, названия, форматы, качество и технические метаданные ответа, включая MIME-тип, статус, Content-Length и Content-Range.</li>
+            </ul>
+            <p>Расширение не запрашивает и намеренно не обрабатывает имена, почтовые или электронные адреса, медицинские и финансовые данные, пароли, данные аутентификации, личную переписку или точную геолокацию.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>3. Использование информации</h2>
+            <p>Информация используется исключительно для сканирования выбранной страницы, определения доступных медиа, отображения форматов, загрузки выбранного ресурса, диагностики сбоев и локального объединения совместимых видео- и аудиодорожек. Для посторонних целей информация не используется.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>4. Локальное хранение и сроки</h2>
+            <ul>
+              <li>Настройки языка интерфейса и режима разработчика хранятся локально до изменения, сброса или удаления расширения.</li>
+              <li>Временные задания загрузки и диагностические события находятся в сессионном хранилище браузера в течение текущей сессии.</li>
+              <li>Большие медиадорожки могут временно записываться в закрытое локальное OPFS-хранилище во время загрузки и объединения. После штатного завершения или отмены расширение удаляет временные файлы. Если очистке помешало аварийное закрытие браузера или устройства, файлы остаются только в локальном хранилище расширения до очистки данных браузера или удаления расширения.</li>
+              <li>Готовый файл сохраняется через Chrome Downloads по запросу пользователя и остаётся под контролем пользователя.</li>
+            </ul>
+            <p>Диагностические отчёты видны только при включённом режиме разработчика. Из отображаемых URL удаляются известные подписанные токены и параметры авторизации. Отчёт покидает устройство только в случае, если пользователь самостоятельно скопировал и передал его.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>5. Сетевой доступ и раскрытие</h2>
+            <p>По умолчанию расширение получает временный доступ к активной вкладке после нажатия пользователем на его иконку. При запуске загрузки может быть запрошен доступ к конкретному CDN. Пользователь может отдельно разрешить или отозвать раннее обнаружение на HTTP- и HTTPS-страницах.</p>
+            <p>По запросу пользователя расширение подключается напрямую к исходному сайту или его CDN для получения выбранного файла. На такие соединения распространяется политика конфиденциальности исходного сервиса. Расширение не добавляет сервер или иного получателя, управляемого разработчиком.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>6. Передача, продажа и реклама</h2>
+            <p>Разработчик не получает, не продаёт, не сдаёт в аренду, не раскрывает и не передаёт пользовательские данные третьим лицам. Данные не используются для рекламы, профилирования, определения кредитоспособности, кредитования или иных целей, не связанных с единственным назначением расширения. Разработчик не разрешает людям читать пользовательские данные.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>7. Безопасность и удалённый код</h2>
+            <p>Pocket Rocket Stream не содержит аналитики и не выполняет JavaScript или WebAssembly с удалённых серверов. Весь исполняемый код включён в пакет расширения. Сетевой доступ ограничен страницей и медиаресурсами, необходимыми для запрошенной пользователем функции.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>8. Управление данными</h2>
+            <p>Пользователь может не запускать обработку, не открывая расширение; отозвать опциональный доступ к сайтам в расширении или настройках Chrome; очистить данные расширения; удалить скачанные файлы либо удалить само расширение. При удалении Chrome удаляет принадлежащее расширению хранилище.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>9. Соответствие Limited Use</h2>
+            <p class="callout">Использование информации, полученной через API Google, соответствует Chrome Web Store User Data Policy, включая требования Limited Use.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>10. Изменения политики</h2>
+            <p>Политика может обновляться при изменении функций расширения или требований законодательства. Дата в начале страницы будет обновлена. О существенных изменениях правил обработки данных будет сообщено до вступления таких изменений в силу.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>11. Контакты</h2>
+            <p>По вопросам конфиденциальности обращайтесь по адресу <a href="mailto:pocket-rocket-stream@verych.ru">pocket-rocket-stream@verych.ru</a>.</p>
+          </section>
+        </div>
+      </article>
+
+      <footer>
+        <strong>Pocket Rocket Stream</strong><br>
+        Privacy by design. No analytics. No developer-operated data server.
+      </footer>
+    </main>
+
+    <script>
+      (() => {
+        const policies = {
+          en: document.getElementById('policy-en'),
+          ru: document.getElementById('policy-ru')
+        };
+        const buttons = Array.from(document.querySelectorAll('[data-language]'));
+
+        function showLanguage(language) {
+          const selected = language === 'ru' ? 'ru' : 'en';
+          document.documentElement.lang = selected;
+          Object.entries(policies).forEach(([name, policy]) => {
+            policy.hidden = name !== selected;
+          });
+          buttons.forEach((button) => {
+            button.setAttribute('aria-pressed', String(button.dataset.language === selected));
+          });
+        }
+
+        buttons.forEach((button) => {
+          button.addEventListener('click', () => showLanguage(button.dataset.language));
+        });
+        showLanguage(/^ru(?:-|$)/i.test(navigator.language) ? 'ru' : 'en');
+      })();
+    </script>
+  </body>
+</html>
