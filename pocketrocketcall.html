@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pocket Rocket Call - Privacy Policy</title>
+    <style>
+        :root { color-scheme: light dark; --bg: #f5f6f8; --surface: #ffffff; --text: #1d2126; --muted: #5c6570; --border: #e1e4e8; --accent: #1a73e8; }
+        @media (prefers-color-scheme: dark) { :root { --bg: #15171b; --surface: #1d2025; --text: #e6e8eb; --muted: #a3abb5; --border: #30353c; --accent: #8ab4f8; } }
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 32px 16px 64px; font: 16px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; color: var(--text); background: var(--bg); }
+        main { max-width: 760px; margin: 0 auto; }
+        article { padding: 32px 36px; margin-bottom: 24px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); }
+        h1 { margin: 0 0 4px; font-size: 28px; line-height: 1.25; }
+        h2 { margin: 28px 0 8px; font-size: 19px; }
+        p, ul, ol { margin: 0 0 12px; }
+        li { margin-bottom: 6px; }
+        .date { color: var(--muted); font-size: 14px; }
+        .langs { margin: 0 0 20px; font-size: 14px; }
+        a { color: var(--accent); }
+        @media (max-width: 600px) { article { padding: 22px 18px; } }
+    </style>
+</head>
+<body>
+<main>
+    <p class="langs"><a href="#en">English</a> · <a href="#ru">Русский</a></p>
+
+    <article id="en" lang="en">
+        <h1>Pocket Rocket Call - Privacy Policy</h1>
+        <p class="date">Effective date: September 15, 2026</p>
+
+        <p>Pocket Rocket Call ("the extension") is a Chrome extension that saves Google Meet captions as text transcripts and, when you ask for it, analyzes them with an AI service you choose. This policy explains what data the extension handles and where it goes.</p>
+
+        <h2>Summary</h2>
+        <ul>
+            <li>Transcripts and settings stay in your browser. The developer has no servers and never receives your data.</li>
+            <li>There are no accounts, analytics, tracking or ads.</li>
+            <li>Transcript text leaves your browser only when you press Analysis, and only to the AI service you configured yourself.</li>
+        </ul>
+
+        <h2>Data the extension handles</h2>
+        <ol>
+            <li>Call transcripts. While you are in a Google Meet call that is being recorded, the extension reads the captions of that call: speaker names, spoken text, timestamps, the meeting title and the meeting code.</li>
+            <li>Settings. Recording preferences, caption and interface language, the analysis prompt.</li>
+            <li>AI service credentials, if you set up AI analysis. The service address, model name, API key, or sign-in tokens when you sign in with an OpenAI account.</li>
+            <li>Folder access, if you choose a folder for .txt files. Chrome keeps a handle to that folder so the extension can write files into it.</li>
+        </ol>
+
+        <h2>Where it is stored</h2>
+        <p>All of this is stored locally on your device, in the extension storage of Chrome (chrome.storage.local and IndexedDB). It is not synced to other devices and is not sent to the developer.</p>
+        <p>Transcript files are written only where you tell the extension to write them: the Downloads folder when you press Download, or the folder you picked in the settings.</p>
+
+        <h2>When data leaves your browser</h2>
+        <p>Only in these cases, and only after your action:</p>
+        <ul>
+            <li>AI analysis. When you press Analysis, the transcript text and the analysis prompt are sent directly from your browser to the AI service you configured: for example OpenAI (api.openai.com, or chatgpt.com and auth.openai.com when you sign in with an OpenAI account), Anthropic (api.anthropic.com), Google Gemini (generativelanguage.googleapis.com), OpenRouter, Ollama, a local gateway or another OpenAI-compatible address you entered. Your API key or sign-in token is sent to that same service to authorize the request. The privacy policy of that service applies to the data it receives.</li>
+            <li>Checking the connection or loading the model list sends your key or token to the configured service, without transcript text.</li>
+        </ul>
+        <p>The extension asks Chrome for access to the address of the AI service only when you set it up, and does not contact any other address.</p>
+
+        <h2>What the extension does not do</h2>
+        <ul>
+            <li>It does not sell or transfer your data to third parties, except to the AI service you chose, as described above.</li>
+            <li>It does not use or transfer data for purposes unrelated to its single purpose, and not to determine creditworthiness or for lending.</li>
+            <li>It does not collect browsing history, and it runs only on meet.google.com.</li>
+        </ul>
+        <p>The use of information received by the extension adheres to the <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">Chrome Web Store User Data Policy</a>, including the Limited Use requirements.</p>
+
+        <h2>Retention and deletion</h2>
+        <p>Transcripts stay until you delete them in the history page. AI analysis results are stored together with their transcript. Signing out removes the sign-in tokens, clearing the key field removes the key. Removing the extension from Chrome deletes all of its stored data. Files you saved to disk stay where you saved them.</p>
+
+        <h2>Children</h2>
+        <p>The extension is not directed at children under 13 and does not knowingly collect their data.</p>
+
+        <h2>Changes</h2>
+        <p>If this policy changes, the new version is published at the same address with a new effective date.</p>
+
+        <h2>Contact</h2>
+        <p><a href="mailto:pocketrocket@verych.ru">pocketrocket@verych.ru</a></p>
+    </article>
+
+    <article id="ru" lang="ru">
+        <h1>Pocket Rocket Call - Политика конфиденциальности</h1>
+        <p class="date">Дата вступления в силу: 15 сентября 2026</p>
+
+        <p>Pocket Rocket Call (далее расширение) это расширение Chrome, которое сохраняет субтитры Google Meet в текстовые стенограммы и по вашему запросу анализирует их выбранным вами AI-сервисом. Здесь описано, какие данные обрабатывает расширение и куда они попадают.</p>
+
+        <h2>Коротко</h2>
+        <ul>
+            <li>Стенограммы и настройки остаются в вашем браузере. У разработчика нет серверов, и он не получает ваши данные.</li>
+            <li>Нет аккаунтов, аналитики, отслеживания и рекламы.</li>
+            <li>Текст стенограммы покидает браузер только когда вы нажимаете Анализ, и только в тот AI-сервис, который вы сами настроили.</li>
+        </ul>
+
+        <h2>Какие данные обрабатываются</h2>
+        <ol>
+            <li>Стенограммы звонков. Во время записываемого звонка в Google Meet расширение читает субтитры этого звонка: имена говорящих, текст, время реплик, название и код встречи.</li>
+            <li>Настройки. Параметры записи, язык субтитров и интерфейса, промпт анализа.</li>
+            <li>Данные доступа к AI-сервису, если вы настроили анализ. Адрес сервиса, название модели, API-ключ или токены входа, если вы вошли через аккаунт OpenAI.</li>
+            <li>Доступ к папке, если вы выбрали папку для .txt. Chrome хранит ссылку на папку, чтобы расширение могло записывать в неё файлы.</li>
+        </ol>
+
+        <h2>Где хранятся</h2>
+        <p>Всё это хранится локально на вашем устройстве, в хранилище расширения Chrome (chrome.storage.local и IndexedDB). Данные не синхронизируются с другими устройствами и не передаются разработчику.</p>
+        <p>Файлы стенограмм записываются только туда, куда вы укажете: в папку загрузок по кнопке Скачать или в папку, выбранную в настройках.</p>
+
+        <h2>Когда данные покидают браузер</h2>
+        <p>Только в этих случаях и только после вашего действия:</p>
+        <ul>
+            <li>AI-анализ. По кнопке Анализ текст стенограммы и промпт отправляются из браузера напрямую в настроенный вами AI-сервис: например OpenAI (api.openai.com, или chatgpt.com и auth.openai.com при входе через аккаунт OpenAI), Anthropic (api.anthropic.com), Google Gemini (generativelanguage.googleapis.com), OpenRouter, Ollama, локальный шлюз или другой OpenAI-совместимый адрес, который вы ввели. Для авторизации запроса туда же отправляется ваш API-ключ или токен. К полученным данным применяется политика конфиденциальности этого сервиса.</li>
+            <li>Проверка подключения и загрузка списка моделей отправляют в настроенный сервис ключ или токен, без текста стенограмм.</li>
+        </ul>
+        <p>Доступ к адресу AI-сервиса расширение запрашивает у Chrome только при его настройке и не обращается ни к каким другим адресам.</p>
+
+        <h2>Чего расширение не делает</h2>
+        <ul>
+            <li>Не продаёт и не передаёт ваши данные третьим лицам, кроме выбранного вами AI-сервиса, как описано выше.</li>
+            <li>Не использует и не передаёт данные в целях, не связанных с его единственным назначением, в том числе для оценки кредитоспособности.</li>
+            <li>Не собирает историю браузера и работает только на meet.google.com.</li>
+        </ul>
+        <p>Использование полученной расширением информации соответствует <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">Chrome Web Store User Data Policy</a>, включая требования Limited Use.</p>
+
+        <h2>Хранение и удаление</h2>
+        <p>Стенограммы хранятся, пока вы не удалите их на странице истории. Результаты AI-анализа хранятся вместе со стенограммой. Выход из аккаунта удаляет токены, очистка поля ключа удаляет ключ. Удаление расширения из Chrome удаляет все его данные. Файлы, сохранённые на диск, остаются там, куда вы их сохранили.</p>
+
+        <h2>Дети</h2>
+        <p>Расширение не предназначено для детей младше 13 лет и сознательно не собирает их данные.</p>
+
+        <h2>Изменения</h2>
+        <p>Если политика изменится, новая версия будет опубликована по тому же адресу с новой датой.</p>
+
+        <h2>Контакт</h2>
+        <p><a href="mailto:pocketrocket@verych.ru">pocketrocket@verych.ru</a></p>
+    </article>
+</main>
+</body>
+</html>
